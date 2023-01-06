@@ -27,6 +27,14 @@ public class Main {
         contain = myArray.contains(15);
         System.out.println(contain);
 
+        int findElement = myArray.findByElement(40);
+        System.out.println(findElement);
+        findElement = myArray.findByElement(70);
+        System.out.println(findElement);
+
+        myArray.deleteByElement(10);
+        System.out.println(myArray);
+
 
     }
 }

@@ -75,6 +75,32 @@ public class ArrayListDemo {
         return false;
     }
 
+    //find by element
+    public int findByElement(int element) {
+        for (int i = 0; i < index; i++) {
+            if (element == array[i])
+                return i;
+
+        }
+        return -1;
+    }
+
+    //delete by element
+    public void deleteByElement(int element) {
+        int find = findByElement(element);
+        if (find > -1) {
+            int[] newArray = new int[index - 1];
+            for (int i = 0, j = 0; i < index; i++) {
+                if (element == array[i])
+                    continue;
+                newArray[j] = array[i];
+                j++;
+            }
+            array = newArray;
+            index--;
+        }
+    }
+
     @Override
     public String toString() {
         return Arrays.toString(array);
